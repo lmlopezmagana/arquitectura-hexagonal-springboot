@@ -1,6 +1,7 @@
 package com.openwebinars.hexagonal.infrastructure.config;
 
 import com.openwebinars.hexagonal.application.usecase.task.create.CreateTaskUseCase;
+import com.openwebinars.hexagonal.application.usecase.task.delete.DeleteTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.task.edit.CompleteTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.task.edit.EditTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.task.find.FindTaskUseCase;
@@ -42,6 +43,10 @@ public class TaskConfig {
         return new EditTaskUseCase(taskRepositoryJpa());
     }
 
+    @Bean
+    public DeleteTaskUseCase deleteTaskUseCase() {
+        return new DeleteTaskUseCase(taskRepositoryJpa());
+    }
 
 
 }
