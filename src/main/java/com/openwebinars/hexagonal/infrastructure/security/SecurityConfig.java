@@ -21,7 +21,9 @@ public class SecurityConfig {
                         .ignoringRequestMatchers(antMatcher("/**")))
                 .authorizeHttpRequests((authz) ->
                         authz
-                                .anyRequest().permitAll())
+                                .requestMatchers("/auth/**").permitAll()
+                                .requestMatchers("/admin/**").hasRole("ADMIN")
+                                .anyRequest().authenticated())
                 .httpBasic(Customizer.withDefaults())
                 .build();
     }
