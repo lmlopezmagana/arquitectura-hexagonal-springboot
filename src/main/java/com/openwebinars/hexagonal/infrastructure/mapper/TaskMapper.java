@@ -4,6 +4,7 @@ import com.openwebinars.hexagonal.application.usecase.task.create.CreateTaskComm
 import com.openwebinars.hexagonal.application.usecase.task.edit.EditTaskCommand;
 import com.openwebinars.hexagonal.domain.model.Task;
 import com.openwebinars.hexagonal.domain.model.TaskId;
+import com.openwebinars.hexagonal.domain.model.UserId;
 import com.openwebinars.hexagonal.infrastructure.db.entity.TaskEntity;
 import com.openwebinars.hexagonal.infrastructure.web.dto.task.TaskEditRequest;
 import com.openwebinars.hexagonal.infrastructure.web.dto.task.TaskRequest;
@@ -18,6 +19,7 @@ public class TaskMapper {
                 .description(task.getDescription())
                 .createdAt(task.getCreatedAt())
                 .completed(task.isCompleted())
+                .author(task.getAuthor() != null ? task.getAuthor().getValue() : null)
                 .build();
         return t;
     }
@@ -29,12 +31,13 @@ public class TaskMapper {
                 .description(task.getDescription())
                 .createdAt(task.getCreatedAt())
                 .completed(task.isCompleted())
+                .author(UserId.of(task.getAuthor()))
                 .build();
     }
 
 
-    public static CreateTaskCommand toCommand(TaskRequest taskRequest) {
-        return new CreateTaskCommand(taskRequest.title(), taskRequest.description());
+    public static CreateTaskCommand toCommand(TaskRequest taskRequest, UserId author) {
+        return new CreateTaskCommand(taskRequest.title(), taskRequest.description(), author);
     }
 
     public static TaskResponse toResponse(Task task) {
@@ -42,7 +45,8 @@ public class TaskMapper {
                 task.getTitle(),
                 task.getDescription(),
                 task.getCreatedAt(),
-                task.isCompleted());
+                task.isCompleted(),
+                task.getAuthor());
     }
 
     public static EditTaskCommand toCommand(Long id, TaskEditRequest taskEditRequest) {

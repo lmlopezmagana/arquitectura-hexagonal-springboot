@@ -35,5 +35,8 @@ public class TaskEntity {
 
     private boolean completed;
 
+    private UUID author;
+
+
 }
 
