@@ -1,9 +1,11 @@
 package com.openwebinars.hexagonal.infrastructure.mapper;
 
 import com.openwebinars.hexagonal.application.usecase.task.create.CreateTaskCommand;
+import com.openwebinars.hexagonal.application.usecase.task.edit.EditTaskCommand;
 import com.openwebinars.hexagonal.domain.model.Task;
 import com.openwebinars.hexagonal.domain.model.TaskId;
 import com.openwebinars.hexagonal.infrastructure.db.entity.TaskEntity;
+import com.openwebinars.hexagonal.infrastructure.web.dto.task.TaskEditRequest;
 import com.openwebinars.hexagonal.infrastructure.web.dto.task.TaskRequest;
 import com.openwebinars.hexagonal.infrastructure.web.dto.task.TaskResponse;
 
@@ -41,5 +43,14 @@ public class TaskMapper {
                 task.getDescription(),
                 task.getCreatedAt(),
                 task.isCompleted());
+    }
+
+    public static EditTaskCommand toCommand(Long id, TaskEditRequest taskEditRequest) {
+        return new EditTaskCommand(
+                TaskId.of(id),
+                taskEditRequest.title(),
+                taskEditRequest.description(),
+                taskEditRequest.complete()
+        );
     }
 }
