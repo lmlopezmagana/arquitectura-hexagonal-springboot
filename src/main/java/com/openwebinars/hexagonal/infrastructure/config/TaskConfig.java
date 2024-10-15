@@ -1,6 +1,7 @@
 package com.openwebinars.hexagonal.infrastructure.config;
 
 import com.openwebinars.hexagonal.application.service.CreateTaskService;
+import com.openwebinars.hexagonal.application.service.FindTaskService;
 import com.openwebinars.hexagonal.application.usecase.task.create.CreateTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.task.delete.DeleteTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.task.edit.CompleteTaskUseCase;
@@ -57,4 +58,8 @@ public class TaskConfig {
         return new CreateTaskService(createTaskUseCase(), findUserUseCase);
     }
 
+    @Bean
+    public FindTaskService findTaskService() {
+        return new FindTaskService(findTaskUseCase(), findUserUseCase);
+    }
 }

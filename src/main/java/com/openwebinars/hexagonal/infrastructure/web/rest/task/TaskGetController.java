@@ -4,6 +4,7 @@ import com.openwebinars.hexagonal.application.usecase.task.find.FindTaskUseCase;
 import com.openwebinars.hexagonal.domain.model.Task;
 import com.openwebinars.hexagonal.domain.model.TaskId;
 import com.openwebinars.hexagonal.infrastructure.mapper.TaskMapper;
+import com.openwebinars.hexagonal.infrastructure.security.model.AuthUser;
 import com.openwebinars.hexagonal.infrastructure.web.dto.task.TaskResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
@@ -21,9 +22,21 @@ public class TaskGetController {
 
     private final FindTaskUseCase findTaskUseCase;
 
+
+    // Solamente tiene sentido para el admin
+    /*
     @GetMapping
-    public List<TaskResponse> allTask() {
+    public List<TaskResponse> allTasks() {
         return findTaskUseCase.findAll()
+                .stream()
+                .map(TaskMapper::toResponse)
+                .toList();
+    }
+     */
+
+    @GetMapping
+    public List<TaskResponse> allTask(@AuthenticationPrincipal AuthUser me) {
+        return findTaskUseCase.findAllByUserId(me.getIdAsUserId())
                 .stream()
                 .map(TaskMapper::toResponse)
                 .toList();
@@ -39,4 +52,3 @@ public class TaskGetController {
 
 
 }
-
