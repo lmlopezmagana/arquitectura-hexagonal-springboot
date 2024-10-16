@@ -1,4 +1,4 @@
-package com.openwebinars.hexagonal.shared.domain.error;
+package com.openwebinars.hexagonal.shared.error;
 
 public class DomainValidationException extends RuntimeException {
 

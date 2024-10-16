@@ -1,6 +1,6 @@
 package com.openwebinars.hexagonal.user.application.validation;
 
-import com.openwebinars.hexagonal.shared.domain.error.DomainValidationException;
+import com.openwebinars.hexagonal.shared.error.DomainValidationException;
 
 public class EmailAlreadyExistsException extends DomainValidationException {
 

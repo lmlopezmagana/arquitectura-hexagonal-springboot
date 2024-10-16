@@ -1,8 +1,8 @@
 package com.openwebinars.hexagonal.shared.infrastructure.web.error;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.openwebinars.hexagonal.shared.domain.error.DomainEntityNotFoundException;
-import com.openwebinars.hexagonal.shared.domain.error.DomainValidationException;
+import com.openwebinars.hexagonal.shared.error.DomainEntityNotFoundException;
+import com.openwebinars.hexagonal.shared.error.DomainValidationException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import lombok.Builder;

@@ -1,4 +1,4 @@
-package com.openwebinars.hexagonal.shared.application.validation;
+package com.openwebinars.hexagonal.shared.validation;
 
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;

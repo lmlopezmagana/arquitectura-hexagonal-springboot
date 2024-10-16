@@ -1,4 +1,4 @@
-package com.openwebinars.hexagonal.shared.domain.error;
+package com.openwebinars.hexagonal.shared.error;
 
 public class DomainEntityNotFoundException extends RuntimeException {
     public DomainEntityNotFoundException(String entity) {
