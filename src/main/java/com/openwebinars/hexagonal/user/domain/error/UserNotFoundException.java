@@ -1,7 +1,7 @@
 package com.openwebinars.hexagonal.user.domain.error;
 
 import com.openwebinars.hexagonal.shared.error.DomainEntityNotFoundException;
-import com.openwebinars.hexagonal.task.domain.model.TaskId;
+import com.openwebinars.hexagonal.task.application.model.TaskId;
 
 public class UserNotFoundException extends DomainEntityNotFoundException {
 

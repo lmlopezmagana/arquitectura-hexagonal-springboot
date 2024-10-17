@@ -1,16 +1,16 @@
 package com.openwebinars.hexagonal.task.infrastructure.config;
 
-import com.openwebinars.hexagonal.task.application.create.CreateTaskService;
-import com.openwebinars.hexagonal.task.application.find.FindTaskService;
-import com.openwebinars.hexagonal.task.application.create.CreateTaskUseCase;
-import com.openwebinars.hexagonal.task.application.delete.DeleteTaskUseCase;
-import com.openwebinars.hexagonal.task.application.edit.CompleteTaskUseCase;
-import com.openwebinars.hexagonal.task.application.edit.EditTaskUseCase;
-import com.openwebinars.hexagonal.task.application.find.FindTaskUseCase;
+import com.openwebinars.hexagonal.task.application.service.create.CreateTaskService;
+import com.openwebinars.hexagonal.task.application.service.find.FindTaskService;
+import com.openwebinars.hexagonal.task.application.service.create.CreateTaskUseCase;
+import com.openwebinars.hexagonal.task.application.service.delete.DeleteTaskUseCase;
+import com.openwebinars.hexagonal.task.application.service.edit.CompleteTaskUseCase;
+import com.openwebinars.hexagonal.task.application.service.edit.EditTaskUseCase;
+import com.openwebinars.hexagonal.task.application.service.find.FindTaskUseCase;
 import com.openwebinars.hexagonal.user.application.find.FindUserUseCase;
-import com.openwebinars.hexagonal.task.domain.repository.TaskRepository;
-import com.openwebinars.hexagonal.task.infrastructure.db.repos.impl.TaskRepositoryImpl;
-import com.openwebinars.hexagonal.task.infrastructure.db.repos.jpa.TaskEntityRepositoryJpa;
+import com.openwebinars.hexagonal.task.application.ports.out.TaskRepository;
+import com.openwebinars.hexagonal.task.infrastructure.outbound.adapter.TaskRepositoryImpl;
+import com.openwebinars.hexagonal.task.infrastructure.outbound.db.repos.TaskEntityRepositoryJpa;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
