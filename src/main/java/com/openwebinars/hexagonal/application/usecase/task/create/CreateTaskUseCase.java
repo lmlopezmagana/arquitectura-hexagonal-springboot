@@ -1,7 +1,7 @@
 package com.openwebinars.hexagonal.application.usecase.task.create;
 
 import com.openwebinars.hexagonal.application.model.Task;
-import com.openwebinars.hexagonal.application.ports.out.TaskRepository;
+import com.openwebinars.hexagonal.application.ports.driven.TaskRepository;
 import lombok.RequiredArgsConstructor;
 
 import java.time.LocalDateTime;

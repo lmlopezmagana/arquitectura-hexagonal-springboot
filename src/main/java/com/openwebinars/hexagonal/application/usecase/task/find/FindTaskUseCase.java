@@ -4,7 +4,7 @@ import com.openwebinars.hexagonal.application.error.TaskNotFoundException;
 import com.openwebinars.hexagonal.application.model.Task;
 import com.openwebinars.hexagonal.application.model.TaskId;
 import com.openwebinars.hexagonal.application.model.UserId;
-import com.openwebinars.hexagonal.application.ports.out.TaskRepository;
+import com.openwebinars.hexagonal.application.ports.driven.TaskRepository;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

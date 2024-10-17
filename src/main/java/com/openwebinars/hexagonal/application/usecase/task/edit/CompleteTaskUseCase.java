@@ -3,7 +3,7 @@ package com.openwebinars.hexagonal.application.usecase.task.edit;
 import com.openwebinars.hexagonal.application.error.TaskNotFoundException;
 import com.openwebinars.hexagonal.application.model.Task;
 import com.openwebinars.hexagonal.application.model.TaskId;
-import com.openwebinars.hexagonal.application.ports.out.TaskRepository;
+import com.openwebinars.hexagonal.application.ports.driven.TaskRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
