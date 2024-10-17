@@ -1,7 +1,7 @@
 package com.openwebinars.hexagonal.application.usecase.task.create;
 
 import com.openwebinars.hexagonal.application.validation.SelfValidating;
-import com.openwebinars.hexagonal.domain.model.UserId;
+import com.openwebinars.hexagonal.application.model.UserId;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Builder;
 import lombok.Getter;

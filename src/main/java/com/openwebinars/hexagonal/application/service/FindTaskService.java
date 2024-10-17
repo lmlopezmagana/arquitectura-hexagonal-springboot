@@ -1,8 +1,8 @@
 package com.openwebinars.hexagonal.application.service;
 
+import com.openwebinars.hexagonal.application.model.*;
 import com.openwebinars.hexagonal.application.usecase.task.find.FindTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.user.find.FindUserUseCase;
-import com.openwebinars.hexagonal.domain.model.*;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

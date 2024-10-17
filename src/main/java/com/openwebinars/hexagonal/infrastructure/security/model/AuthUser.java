@@ -1,8 +1,8 @@
 package com.openwebinars.hexagonal.infrastructure.security.model;
 
-import com.openwebinars.hexagonal.domain.model.User;
-import com.openwebinars.hexagonal.domain.model.UserId;
-import com.openwebinars.hexagonal.infrastructure.db.entity.UserRole;
+import com.openwebinars.hexagonal.application.model.User;
+import com.openwebinars.hexagonal.application.model.UserId;
+import com.openwebinars.hexagonal.infrastructure.outbound.db.entity.UserRole;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

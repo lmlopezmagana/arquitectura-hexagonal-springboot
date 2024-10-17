@@ -1,9 +1,9 @@
 package com.openwebinars.hexagonal.application.usecase.user.find;
 
-import com.openwebinars.hexagonal.domain.error.UserNotFoundException;
-import com.openwebinars.hexagonal.domain.model.User;
-import com.openwebinars.hexagonal.domain.model.UserId;
-import com.openwebinars.hexagonal.domain.repository.UserRepository;
+import com.openwebinars.hexagonal.application.error.UserNotFoundException;
+import com.openwebinars.hexagonal.application.model.User;
+import com.openwebinars.hexagonal.application.model.UserId;
+import com.openwebinars.hexagonal.application.ports.out.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 import java.util.List;

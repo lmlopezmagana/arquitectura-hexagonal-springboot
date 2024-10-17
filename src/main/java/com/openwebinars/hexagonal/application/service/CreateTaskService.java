@@ -3,9 +3,9 @@ package com.openwebinars.hexagonal.application.service;
 import com.openwebinars.hexagonal.application.usecase.task.create.CreateTaskCommand;
 import com.openwebinars.hexagonal.application.usecase.task.create.CreateTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.user.find.FindUserUseCase;
-import com.openwebinars.hexagonal.domain.model.Task;
-import com.openwebinars.hexagonal.domain.model.User;
-import com.openwebinars.hexagonal.domain.model.UserTask;
+import com.openwebinars.hexagonal.application.model.Task;
+import com.openwebinars.hexagonal.application.model.User;
+import com.openwebinars.hexagonal.application.model.UserTask;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

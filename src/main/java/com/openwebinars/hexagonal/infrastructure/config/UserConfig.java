@@ -2,9 +2,9 @@ package com.openwebinars.hexagonal.infrastructure.config;
 
 import com.openwebinars.hexagonal.application.usecase.user.create.CreateUserUseCase;
 import com.openwebinars.hexagonal.application.usecase.user.find.FindUserUseCase;
-import com.openwebinars.hexagonal.domain.repository.UserRepository;
-import com.openwebinars.hexagonal.infrastructure.db.repos.impl.UserRepositoryImpl;
-import com.openwebinars.hexagonal.infrastructure.db.repos.jpa.UserEntityRepositoryJpa;
+import com.openwebinars.hexagonal.application.ports.out.UserRepository;
+import com.openwebinars.hexagonal.infrastructure.outbound.adapter.UserRepositoryImpl;
+import com.openwebinars.hexagonal.infrastructure.outbound.db.repos.UserEntityRepositoryJpa;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

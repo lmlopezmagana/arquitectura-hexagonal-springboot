@@ -1,8 +1,8 @@
 package com.openwebinars.hexagonal.application.usecase.user.create;
 
 import com.openwebinars.hexagonal.application.validation.EmailAlreadyExistsException;
-import com.openwebinars.hexagonal.domain.model.User;
-import com.openwebinars.hexagonal.domain.repository.UserRepository;
+import com.openwebinars.hexagonal.application.model.User;
+import com.openwebinars.hexagonal.application.ports.out.UserRepository;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor

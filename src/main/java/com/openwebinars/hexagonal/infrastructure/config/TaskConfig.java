@@ -8,9 +8,9 @@ import com.openwebinars.hexagonal.application.usecase.task.edit.CompleteTaskUseC
 import com.openwebinars.hexagonal.application.usecase.task.edit.EditTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.task.find.FindTaskUseCase;
 import com.openwebinars.hexagonal.application.usecase.user.find.FindUserUseCase;
-import com.openwebinars.hexagonal.domain.repository.TaskRepository;
-import com.openwebinars.hexagonal.infrastructure.db.repos.impl.TaskRepositoryImpl;
-import com.openwebinars.hexagonal.infrastructure.db.repos.jpa.TaskEntityRepositoryJpa;
+import com.openwebinars.hexagonal.application.ports.out.TaskRepository;
+import com.openwebinars.hexagonal.infrastructure.outbound.adapter.TaskRepositoryImpl;
+import com.openwebinars.hexagonal.infrastructure.outbound.db.repos.TaskEntityRepositoryJpa;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

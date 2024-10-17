@@ -1,6 +1,6 @@
 package com.openwebinars.hexagonal.infrastructure.security;
 
-import com.openwebinars.hexagonal.domain.repository.UserRepository;
+import com.openwebinars.hexagonal.application.ports.out.UserRepository;
 import com.openwebinars.hexagonal.infrastructure.security.model.AuthUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
